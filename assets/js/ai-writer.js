@@ -40,6 +40,7 @@ $(document).ready(function () {
             // window.alert('');
         }else{
             $("#modal").css('display', 'block');
+            $("#submit").text('Loading ..... ');
             $("#submit").attr('disabled', true);
             jQuery.ajax({
                 url:"./engine/writer.php",
@@ -48,6 +49,7 @@ $(document).ready(function () {
                 success: function (res) {
                     $("#modal").css('display', 'none');
                     $("#submit").attr('disabled', false);
+                    $("#submit").text('Generate');
                         // console.log(res);
                     // $("#err").css('color','orange');
                     $("#content").html(res);
