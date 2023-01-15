@@ -6,7 +6,7 @@ include("inc/header.php")
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">NC-Digitals Tools</a></h1>
+      <h1 class="logo me-auto"><a href="index.html" style="max-width: fit-content;">NC- Digital Tools</a></h1>
     
       <nav id="navbar" class="navbar">
         <ul>

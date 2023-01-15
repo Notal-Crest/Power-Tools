@@ -3,14 +3,7 @@
 // var_dump($_REQUEST);
  $title = $_REQUEST['t'];
  $intro = $_REQUEST['i'];
- $res = generate_text($title, $intro);
-
- return json_decode($res, true);
-
-
-
- 
-function generate_text($title, $intro){
+//  $length = $_REQUEST['l'];
 
     $curl = curl_init();
 
@@ -36,12 +29,21 @@ function generate_text($title, $intro){
     $response = curl_exec($curl);
 
     curl_close($curl);
-    return $response;
-}
 
+    // $res1 = str_replace("[", "", $response);
+    $res2 = json_decode($response, true);
+    // var_dump($res2);
+    if (!@$res2['detail']) {
+        foreach ($res2 as $value) {
+            echo $value['text'];
+            echo "\n";
+        }
+    } else {
+        echo $res2['details']['msg']; 
+    }
+    
+    
 
-
-
-
+// }
 
 ?>
