@@ -28,19 +28,27 @@
 
     $response = curl_exec($curl);
 
-    curl_close($curl);
+        $curl_errno = curl_errno($curl);
+        $curl_error = curl_error($curl); 
+   curl_close($curl);
 
     // $res1 = str_replace("[", "", $response);
     $res2 = json_decode($response, true);
-    // var_dump($res2);
-    if (!@$res2['detail']) {
+     //print_r($curl_errno);
+     //exit;
+    if($curl_errno > 0){
+        echo "Connection Failure";
+    }else{
+     if (!@$res2['detail']) {
         foreach ($res2 as $value) {
             echo $value['text'];
             echo "\n";
         }
-    } else {
+     } else {
         echo $res2['details']['msg']; 
+     }
     }
+   
     
     
 
