@@ -14,7 +14,7 @@ include("inc/header.php")
           <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
           <li class="dropdown"><a href="#AI" class="nav-link scrollto"><span>AI Generators</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#AI" class="nav-link scrollto" >AI Writer</a></li>
+              <li><a href="#AI" class="nav-link scrollto" >AI Caption Generator</a></li>
               <li><a href="#AI" class="nav-link scrollto" >AI Translator</a></li>
               <li><a href="#AI" class="nav-link scrollto" >Outline Generator</a></li>
               <li><a href="#AI" class="nav-link scrollto" >Unique Title Generator</a></li>
@@ -22,7 +22,7 @@ include("inc/header.php")
           </li>
           <li class="dropdown"><a href="#Web" class="nav-link scrollto"><span>Web Tools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#Web" class="nav-link scrollto" >Favicon Generator</a></li>
+              <li><a href="#Web" class="nav-link scrollto" >Favicon Generator</a></li> 
               <li><a href="#Web" class="nav-link scrollto" >Password Generator</a></li>
               <li><a href="#Web" class="nav-link scrollto" >Program Policy Generator</a></li>
               <li><a href="#Web" class="nav-link scrollto" >Terms and Condition Generator</a></li>

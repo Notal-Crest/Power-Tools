@@ -1,10 +1,31 @@
 <?php
 
-// var_dump($_REQUEST);
- $title = $_REQUEST['t'];
- $intro = $_REQUEST['i'];
-//  $length = $_REQUEST['l'];
 
+require __DIR__. './vendor/autoload.php';
+
+use Orhanerday\OpenAi\OpenAi;
+
+$open_ai_key = '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';
+$open_ai= new OpenAi($open_ai_key);
+
+
+
+ $prompt = $_REQUEST['t'];
+//  var_dump($prompt);
+//  exit;
+//  $intro = $_REQUEST['i'];
+//  $length = $_REQUEST['l'];
+$complete = $open_ai->completion([
+    'model' => 'text-davinci-002',
+    'prompt' => 'Hello',
+    'temperature' => 0.9,
+    'max_tokens' => 150,
+    'frequency_penalty' => 0,
+    'presence_penalty' => 0.6,
+ ]);
+
+
+ 
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
@@ -32,6 +53,8 @@
         $curl_error = curl_error($curl); 
    curl_close($curl);
 
+//    var_dump($response);
+//    exit;
     // $res1 = str_replace("[", "", $response);
     $res2 = json_decode($response, true);
      //print_r($curl_errno);

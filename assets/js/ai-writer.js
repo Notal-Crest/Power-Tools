@@ -1,8 +1,8 @@
 $(document).ready(function () {
     
     $("#submit").click(function () {
-        var t = $("#title").val();
-        var i = $("#intro").val();
+        var t = $("#prompt").val();
+        // var i = $("#intro").val();
         // var l = $("#length").val();
 
         if (t == ' ' || t == '') {
@@ -13,27 +13,10 @@ $(document).ready(function () {
                 button: "Ok",  
               });  
             // window.alert('');
-        }else if (i == ' ' || i == '') {
-            swal({  
-                title: "Warning!!",  
-                text: "All Field Are Required ! ",  
-                icon: "warning",  
-                button: "Ok",  
-              });
-            // window.alert('All Field Are Required');
-        
         }else if(t.length < 2){
             swal({  
                 title: "Warning!!",  
                 text: "Minimum Title Length is 6 characters ! ",  
-                icon: "warning",  
-                button: "Ok",  
-              });
-            // window.alert('');
-        }else if(i.length < 5){
-            swal({  
-                title: "Warning!!",  
-                text: "Minimum Introductory Text Length is 10 characters ! ",  
                 icon: "warning",  
                 button: "Ok",  
               });
@@ -45,7 +28,7 @@ $(document).ready(function () {
             jQuery.ajax({
                 url:"./engine/writer.php",
                 type:"POST",
-                data: {t,i},
+                data: {t},
                 success: function (res) {
                     $("#modal").css('display', 'none');
                     $("#submit").attr('disabled', false);
