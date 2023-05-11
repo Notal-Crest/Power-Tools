@@ -295,7 +295,7 @@ include("inc/header.php")
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Kindness Ozokoli</h4>
+                <h4>Kindness Ozokolie</h4>
                 <span>Senior Frontend Developer</span>
                 <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
@@ -312,7 +312,7 @@ include("inc/header.php")
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Micheal Ozokoli</h4>
+                <h4>Micheal Ozokolie</h4>
                 <span>Project Manager</span>
                 <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
