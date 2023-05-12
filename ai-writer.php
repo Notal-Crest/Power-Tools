@@ -45,19 +45,6 @@ include("./inc/header.php")
                   <label for="prompt">Keyword</label>
                   <input type="text" id="prompt" name="prompt" placeholder="Shoe, Burger, iPhone, Bread e.t.c" class="form-control" maxlength="200" minlength="2" required>
                   <br>
-                  <!-- <label for="intro">Content Introduction</label>
-                  <input type="text" id="intro" name="intro" placeholder="Introductory Statement" class="form-control" maxlength="1500" minlength="5" required>
-                  <br> -->
-                  <!-- <label for="length">Content Length</label>
-                  <select name="length" id="length" class="form-control" required>
-                    <option hidden value="" aria-placeholder="Select Number Of Paragraph">Select Length</option>
-                    <option value="1">1 Paragraphs</option>
-                    <option value="2">2 Paragraphs</option>
-                    <option value="3">3 Paragraphs</option>
-                    <option value="4">4 Paragraphs</option>
-                    <option value="5">5 Paragraphs</option>
-                  </select>
-                   -->
                   <div id="warning">
                   </div>
                   <br>
