@@ -85,9 +85,11 @@
 					<label for="in1"><b>Company Name:</b></label>
 					<input type="text" ng-model="compname" class="form-control" id="in1">
 					<br>
-					<button type="button" class="btn btn-primary priv-btn"  onclick="generate_priv()" data-clipboard-target="#privacy-policy">Copy to clipboard</button>
+					<button type="button" class="btn btn-primary priv-btn btn-sm"  onclick="generate_priv()" data-clipboard-target="#privacy-policy">Copy to clipboard</button>
+					<button type="button" class="btn btn-primary btn-sm" id="gen">Generate</button> 
+<br>
 
-					<div id="privacy-policy">
+					<div id="privacy-policy" class="mt-3 border p-2">
 						<h1>{{compname}} Privacy Policy</h1>
 						<p>{{compname}} takes your privacy seriously. This policy page is to inform you of the personal information we gather, and how we use, store and protect it.</p>
 
@@ -118,10 +120,12 @@
 	<script>
 		function generate_priv() {
 			new Clipboard('.priv-btn');
-		}
+		};
+		
+		
 	</script>
 
- 
+
 <?php
 include("inc/footer.php")
 ?>

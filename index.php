@@ -130,11 +130,11 @@ include("inc/header.php")
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Nelson.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Nelson Omoniyi</h4>
                 <span>Senior Developer</span>
-                <p>Full-Stack Web Application & Python Automation Developer</p>
+                <!-- <p>Full-Stack Web Application & Python Automation Developer</p> -->
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -147,11 +147,11 @@ include("inc/header.php")
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Ife.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Ife Abraham Omoniyi</h4>
                 <span>Associate Senior Developer</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <!-- <p>Aut maiores voluptates amet et quis praesentium qui senda para</p> -->
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -164,11 +164,11 @@ include("inc/header.php")
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Victory.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Victory Chukwu</h4>
                 <span>Frontend Developer</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <!-- <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p> -->
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -179,13 +179,12 @@ include("inc/header.php")
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
+          <!-- <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Kindness Ozokolie</h4>
                 <span>Senior Frontend Developer</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -202,7 +201,6 @@ include("inc/header.php")
               <div class="member-info">
                 <h4>Micheal Ozokolie</h4>
                 <span>Project Manager</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -211,15 +209,15 @@ include("inc/header.php")
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/Nife.jpeg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>New-World Odunlami</h4>
-                <span>Cheif Designer</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <span>Graphics Designer</span>
+                <!-- <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p> -->
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
