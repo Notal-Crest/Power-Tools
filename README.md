@@ -6,10 +6,10 @@ If you havent done so, pls download xampp from https://www.apachefriends.org/dow
 
 ----------------------------------------------------------------------------------------------
 
-# 1. Open Your C Drive and locate the xampp folder.
-# 2. clone this application inside the htdocs folder located in the xammp folder.
-# 3. Run the xampp control panel and click on the start button in front of apache and mysql(the buttons should change from start to stop, tis means thet the server is strated and you are ready to run your application on a browser.).
-# 4. open your brower and type localhost/Power-Tools.
+ 1. Open Your C Drive and locate the xampp folder.
+ 2. clone this application inside the htdocs folder located in the xammp folder.
+ 3. Run the xampp control panel and click on the start button in front of apache and mysql(the buttons should change from start to stop, this means thet the server is started and you are ready to run your application on a browser.).
+ 4. open your brower and type localhost/Power-Tools.
 Voila!!!!! your application is served on the browser... now you can edit whater and see the change reflected on the browser before pushin it to github for deployment.
 
 Thanks #Team NOTAL CREST.
