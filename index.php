@@ -13,10 +13,10 @@ include("inc/header.php")
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li class="dropdown"><a href="#Web" class="nav-link scrollto"><span>Web Tools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#Web" class="nav-link scrollto" >Password Generator</a></li>
-              <li><a href="#Web" class="nav-link scrollto" >Privacy Policy Generator</a></li>
-              <li><a href="#Web" class="nav-link scrollto" >AI Writer</a></li>
-              <li><a href="#Web" class="nav-link scrollto" >Outline Generator</a></li>
+              <li><a href="password_gen.php" class="nav-link scrollto" >Password Generator</a></li>
+              <li><a href="privacy.php" class="nav-link scrollto" >Privacy Policy Generator</a></li>
+              <li><a href="ai-writer.php" class="nav-link scrollto" >AI Writer</a></li>
+              <li><a href="comparator.php" class="nav-link scrollto" >Product Price Comparator</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#">Our Portfolio</a></li>
@@ -28,7 +28,7 @@ include("inc/header.php")
 
     </div>
   </header><!-- End Header -->
-
+ 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -48,7 +48,9 @@ include("inc/header.php")
     </div>
 
   </section><!-- End Hero -->
-
+  <div class="container-fluid p-2 border text-danger text-center">
+    <p class="text-bold">Site Under Construction!</p>
+  </div>
   <main id="main">
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us section-bg">
@@ -110,8 +112,8 @@ include("inc/header.php")
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Outline Generator</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4><a href="videod.php">Video Downloader</a></h4>
+              <p>This powerful tool is built to help you seamlessly compare product prices across multiple vendors.</p>
             </div>
           </div>
         </div>

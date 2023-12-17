@@ -12,4 +12,8 @@ If you havent done so, pls download xampp from https://www.apachefriends.org/dow
 # 4. open your brower and type localhost/Power-Tools.
 Voila!!!!! your application is served on the browser... now you can edit whater and see the change reflected on the browser before pushin it to github for deployment.
 
+
+NOTE FOR NELSON
+    projects to attend to, video downloader, phone number location tracker, password cracker, barcode generator, image to sketch, audio to text.
+
 Thanks #Team NOTAL CREST.
