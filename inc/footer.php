@@ -69,9 +69,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-<script src="assets/js/ai-writer.js"></script>
-<script src="assets/js/password.js"></script>
-<script src="assets/js/comparator.js"></script>
+<script src="assets/js/tools.js"></script>
 
 <script>
 

@@ -3,32 +3,36 @@ from pytube import YouTube
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import requests
+import pytube
 import time
 import json
+import os
+from tkinter import filedialog
+# from tkinter import StringVar
 
 
 app = Flask(__name__)
 
-@app.route("/get", methods=['POST'])
-def Download():
-    print("An error has occurred")
-    
+@app.route("/get", methods=['GET'])
+
+
+def get_data():
     data = request.get_json()
     url = data['data']
     link = url.strip('\"')
-    # 
-
-    youtubeObject = YouTube(link)
-    youtubeObject = youtubeObject.streams.get_highest_resolution()
-    try:
-        youtubeObject.download()
-    except:
-        print("An error has occurred")
-    print("Download is completed successfully")
-
+    # return jsonify({"messae": f'{link}'})
     
-
-
+    download_Directory = filedialog.askdirectory(
+        initialdir="YOUR DIRECTORY PATH", title="Save Video")
+    if not os.path.isdir(download_Directory):
+        exit()
+    else:
+        #    Use pytube to download the video
+        pyt = pytube.YouTube(link)
+        stream = pyt.streams.filter(file_extension="mp4").first()
+        stream.download(download_Directory)
+        # Return a success message
+        return jsonify({"message": "Video downloaded successfully!"})
 
 # @app.route("/jumia", methods=['POST'])
 # def find_item():

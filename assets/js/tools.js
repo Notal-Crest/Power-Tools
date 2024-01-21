@@ -1,71 +1,142 @@
 
+// AI Writer.
+$(document).ready(function () {
+    $("#submit").click(function () {
+        var t = $("#prompt").val();
+        // var i = $("#intro").val();
+        // var l = $("#length").val();
 
+        if (t == ' ' || t == '') {
+            swal({  
+                title: "Warning!!",  
+                text: "All Field Are Required ! ",  
+                icon: "warning",  
+                button: "Ok",  
+              });  
+            // window.alert('');
+        }else if(t.length < 2){
+            swal({  
+                title: "Warning!!",  
+                text: "Minimum Title Length is 6 characters ! ",  
+                icon: "warning",  
+                button: "Ok",  
+              });
+            // window.alert('');
+        }else{
+            $("#modal").css('display', 'block');
+            $("#submit").text('Loading ..... ');
+            $("#submit").attr('disabled', true);
+            jQuery.ajax({
+                url:"./engine/writer.php",
+                type:"POST",
+                data: {t},
+                success: function (res) {
+                    $("#modal").css('display', 'none');
+                    $("#submit").attr('disabled', false);
+                    $("#submit").text('Generate');
+                        // console.log(res);
+                    // $("#err").css('color','orange');
+                    $("#content").html(res);
+                },
+                error: function (error) {
+                    swal("Error", "An Error Occured, Please Try Again Later", "error");
+                }
+            })
+        }
+    })
+});
 
+// Password |Generator
+$(document).ready(function () {
+    
+    $("#submit_password").click(function () {
+        // var name = $("#name").val();
+        var len = $("#length").val();
+        // var l = $("#length").val();
+        // alert(name);
+        if (len == ' ' || len == '') {
+            swal({  
+                title: "Warning!!",  
+                text: "Length Field Is Required ! ",  
+                icon: "warning",  
+                button: "Ok",  
+              });
+        }else{
+            $("#modal").css('display', 'block');
+            $("#submit_password").text('Loading ..... ');
+            $("#submit_password").attr('disabled', true);
+            jQuery.ajax({
+                url:"./engine/password.php",
+                type:"POST",
+                data: {len},
+                success: function (res) {
+                    $("#modal").css('display', 'none');
+                    $("#submit_password").attr('disabled', false);
+                    $("#submit_password").text('Generate');
+                        // console.log(res);
+                    // $("#err").css('color','orange');
+                    $("#content").html(res);
+                },
+                error: function (error) {
+                    swal("Error", "An Error Occured, Please Try Again Later", "error");
+                }
+            })
+        }
+    })
+});
 
+$(document).ready(function() {
+    $("#video").click(function () {
+        // var name = $("#name").val();
+        var data = $("#item").val();
+        // var l = $("#length").val();
+        // alert(name);
+        if (data == ' ' || data == '') {
+            swal({  
+                title: "Warning!!",  
+                text: "This Field Cannot Be Empty! ",  
+                icon: "warning",  
+                button: "Ok",  
+              });
+        }else if(!validURL(data)){
+            swal({  
+                title: "Warning!!",  
+                text: "Invalid URL! ",  
+                icon: "warning",  
+                button: "Ok",  
+              });
+        }else{
+            $("#modal").css('display', 'block');
+            $("#video").text('Loading ..... ');
+            $("#video").attr('disabled', true);
+            // alert("Am here")
+            jQuery.ajax({
+                url:"engine/downloader.php",
+                type:"POST",
+                data: {data},            
+                success: function (res) {
+                    $("#modal").css('display', 'none');
+                    $("#video").attr('disabled', false);
+                    $("#video").text('Download');
+                        // console.log(res);
+                    // $("#err").css('color','orange');
+                    $("#content").html(res);
+                },
+                error: function (error) {
+                    swal("Error 999", "An Error Occured, Please Try Again Later", "error");
+                }
+            })
+        }
+    })
+})
 
+function validURL(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
+  }
 
-
-
-// $(document).ready(function () {
-//     const chunk = 4;
-//     $("#item").keypress(function (e) { 
-//          if (e.keyCode === 13) {
-//           e.preventDefault();
-//         }
-//     });
-//     $("#search").click(function () { 
-//         $('#jumia').remove();
-//         var prod = $("#item").val()
-//         if (prod == ' ' || prod == '' || prod == '  ' || prod == '   ' || prod == '    ' || prod == '     ' || prod == '      ' || prod == '       ' || prod == '       '|| prod == '        '|| prod == '         '|| prod == '          '|| prod == '           ') {
-//             swal({  
-//                 title: "Warning!!",  
-//                 text: "Search Box Cannot Be Empty ! ",  
-//                 icon: "warning",  
-//                 button: "Ok",  
-//               });  
-//             // window.alert('');
-//         }else{
-//             jQuery.ajax({
-//                 url:"./engine/c-engine.php",
-//                 type:"POST",
-//                 data: { key: prod},
-//                 success :function (res) {
-//                     // alert( "Success: " + res );
-//                     if (res == "901") {
-//                         swal({  
-//                             title: "Error!!",  
-//                             text: "Connection Failure !",  
-//                             icon: "error",  
-//                             button: "Ok",  
-//                         });  
-//                     } else if(res == "404"){
-//                         swal({  
-//                             title: "Warning !",  
-//                             text: "Product Not Available At The Moment !",  
-//                             icon: "warning",  
-//                             button: "Ok",  
-//                         });   
-//                     }else{
-//                         let arr = JSON.parse(res);
-//                         // console.log(arr);
-//                         let id = 0;
-//                         $("#result").append('<div class="container" data-aos="fade-up" id="jumia"><div class="section-title"><h2>Products from Jumia</h2></div></div>');
-//                         arr.forEach(function(i) {
-//                             id++;
-//                             $("#jumia").append("<div class='row' id='cards"+ id +"'></div>");
-//                            var n = JSON.parse(JSON.stringify(i));
-//                            var data = Object.values(n);
-//                         //    console.log(data[0]);
-//                             data.forEach(function (e) {
-//                                  $("#cards"+id).append("<div class='col-md-3 col-sm-6 p-1'><div class='card '><img src='"+e['img']+"' class='card-img-top' alt='product image'><div class='card-body'><p class='card-text'>"+e['name']+" <br> <b>"+e['price']+"</b> <br> <a href='"+e['link']+"' class='btn btn-primary' target='_blank'>Open Link</a> </p></div></div></div> ");
-//                             })
-//                         });
-//                     }
-//                 },
-//                 error :function (error) {
-//                     swal("Error", "An Error Occured, Please Try Again Later", error);
-//                 },
-//             });
-//         }
-//     });
-// });

@@ -84,36 +84,37 @@ include("inc/header.php")
         <div class="section-title">
           <h2>Web Tools</h2>
 
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="privacy.php">Privacy Policy Generator</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <div class="row">
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="privacy.php">Privacy Policy Generator</a></h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="password_gen.php">Unique Password Generator</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-layer"></i></div>
+                <h4><a href="password_gen.php">Unique Password Generator</a></h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="ai-writer.php">AI Writer</a></h4>
-              <p>Our AI Writer helps you generate content on any topic of your choice with few seconds!</p>
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="ai-writer.php">AI Writer</a></h4>
+                <p>Our AI Writer helps you generate content on any topic of your choice with few seconds!</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="videod.php">Video Downloader</a></h4>
-              <p>This powerful tool is built to help you seamlessly compare product prices across multiple vendors.</p>
+            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-layer"></i></div>
+                <h4><a href="Vdownloader.php">Video Downloader</a></h4>
+                <p>This powerful tool is built to help you seamlessly compare product prices across multiple vendors.</p>
+              </div>
             </div>
           </div>
         </div>
