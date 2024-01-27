@@ -1,3 +1,4 @@
+from getpass import getpass
 from flask import Flask, request, jsonify
 from pytube import YouTube
 from selenium import webdriver
@@ -7,13 +8,14 @@ import pytube
 import time
 import json
 import os
+import tkinter
 from tkinter import filedialog
-# from tkinter import StringVar
-
+from pathlib import Path
 
 app = Flask(__name__)
 
 @app.route("/get", methods=['GET'])
+
 
 
 def get_data():
@@ -22,15 +24,16 @@ def get_data():
     link = url.strip('\"')
     # return jsonify({"messae": f'{link}'})
     
-    download_Directory = filedialog.askdirectory(
-        initialdir="YOUR DIRECTORY PATH", title="Save Video")
-    if not os.path.isdir(download_Directory):
+    downloads_path = str(Path.home() / "Downloads")
+    # download_Directory = filedialog.askdirectory(
+    #     initialdir="YOUR DIRECTORY PATH", title="Save Video")
+    if not os.path.isdir(downloads_path):
         exit()
     else:
         #    Use pytube to download the video
         pyt = pytube.YouTube(link)
         stream = pyt.streams.filter(file_extension="mp4").first()
-        stream.download(download_Directory)
+        stream.download(downloads_path)
         # Return a success message
         return jsonify({"message": "Video downloaded successfully!"})
 
