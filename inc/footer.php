@@ -57,7 +57,8 @@
 <!-- Vendor JS Files -->
 
 <script src="assets/js/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0-2014.11.23/jquery.blockUI.min.js" integrity="sha512-Z84iqqN8wVpPeBsDTKA6zWs3nguaCk7bvDD+KNLbDFNmWVLHsRDJd0Xr/wKrl95o7mSvN8YF69hXuZVzMGzgGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>

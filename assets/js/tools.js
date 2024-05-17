@@ -86,41 +86,99 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-    $("#video").click(function () {
+    $("#gen").click(function () {
         // var name = $("#name").val();
-        var data = $("#item").val();
+        var data = $("#in1").val();
         // var l = $("#length").val();
         // alert(name);
         if (data == ' ' || data == '') {
-            swal({  
+            Swal.fire({  
                 title: "Warning!!",  
                 text: "This Field Cannot Be Empty! ",  
                 icon: "warning",  
                 button: "Ok",  
               });
         }else if(!validURL(data)){
-            swal({  
+            Swal.fire({  
                 title: "Warning!!",  
                 text: "Invalid URL! ",  
                 icon: "warning",  
                 button: "Ok",  
               });
         }else{
+            $.blockUI();
             $("#modal").css('display', 'block');
-            $("#video").text('Loading ..... ');
-            $("#video").attr('disabled', true);
+            $("#gen").text('Loading ..... ');
+            $("#gen").attr('disabled', true);
             // alert("Am here")
             jQuery.ajax({
-                url:"engine/downloader.php",
+                url:"engine/shortener.php",
                 type:"POST",
                 data: {data},            
                 success: function (res) {
-                    $("#modal").css('display', 'none');
-                    $("#video").attr('disabled', false);
-                    $("#video").text('Download');
-                        // console.log(res);
-                    // $("#err").css('color','orange');
-                    $("#content").html(res);
+                    var response = JSON.parse(res);
+                    // alert(response);
+                    if (res == '') {
+                        Swal.fire({
+                            text: 'A Critical Error Occured Please Contact Your Administrator!',
+                            icon: "Error",
+                            showCancelButton: false,
+                            confirmButtonColor: "#3085d6",
+                          }).then((result) => {
+                            // console.log(result);
+                                $.unblockUI();
+                                window.location.reload();
+                          });
+                    } else {
+                        $("#modal").css('display', 'none');
+                        $.unblockUI();
+                        
+                        var rescode = response.response_code;
+                        var resmessage = response.response_message;
+                        if (rescode == '201') {
+                            Swal.fire({
+                                text: resmessage,
+                                icon: "success",
+                                showCancelButton: false,
+                                confirmButtonColor: "#3085d6",
+                                confirmButtonText: "Copy Link",
+                                cancelButtonColor: "#d33",
+                                cancelButtonText: "Cancel",
+
+                              }).then((result) => {
+                                if (result.isConfirmed) {
+                                    navigator.clipboard.writeText(resmessage);
+                                    Swal.fire({
+                                        text: "Link Copied!",
+                                        icon: "success",
+                                        showCancelButton: false,
+                                        confirmButtonColor: "#3085d6",
+                                      }).then((result) => {
+                                        // console.log(result);
+                                        $.unblockUI();
+                                        window.location.reload();
+                                        // console.log(result);
+                                      });
+                                } else {
+                                    // console.log(result);
+                                }
+                              
+                            });
+                            $("#gen").attr("disabled", false);
+                            
+                        } else {
+                            Swal.fire({
+                                text: resmessage,
+                                icon: "error",
+                            });
+                            $("#button").attr("disabled", true);
+                            
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1000);
+                        }
+                        $("#content").html(res);
+                    }
                 },
                 error: function (error) {
                     swal("Error 999", "An Error Occured, Please Try Again Later", "error");
@@ -129,6 +187,7 @@ $(document).ready(function() {
         }
     })
 })
+
 
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol

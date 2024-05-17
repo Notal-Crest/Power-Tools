@@ -3,9 +3,9 @@
 $data = $_REQUEST['data'];
 //  $length = $_REQUEST['l'];
 
-// var_dump($data);
+
 $response = Vdownload($data);
-echo $response;
+
 function Vdownload($data)
 {
 	
@@ -31,7 +31,23 @@ function Vdownload($data)
 	$response = curl_exec($curl);
 
 	curl_close($curl);
-	return $response;
+	// return $response;
+	$data = json_decode($response, true);
+	// var_dump($response);
+	// exit;
+	if (isset($data)) {
+		// var_dump($data['message']);
+		// exit;
+		if ($data['message'] == 'Video downloaded successfully!') {
+			return json_encode(array('response_code'=>201,'response_message'=>'Video downloaded successfully!'));
+		}else {
+			return json_encode(array('response_code'=>202,'response_message'=>'Something went wrong please try again later! '.$data["message"].''));
+		}
+	}else{
+		return json_encode(array('response_code'=>209,'response_message'=>'Something went wrong please contact your administrator! '));
+	}
+		
+	// $data = json_decode(json_encode($response), true);
 
 }
 

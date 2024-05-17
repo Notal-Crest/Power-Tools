@@ -14,9 +14,9 @@ include("inc/header.php")
           <li class="dropdown"><a href="#Web" class="nav-link scrollto"><span>Web Tools</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="password_gen.php" class="nav-link scrollto" >Password Generator</a></li>
-              <li><a href="privacy.php" class="nav-link scrollto" >Privacy Policy Generator</a></li>
+              <li><a href="shortener.php" class="nav-link scrollto" >URL Shortener</a></li>
               <li><a href="ai-writer.php" class="nav-link scrollto" >AI Writer</a></li>
-              <li><a href="comparator.php" class="nav-link scrollto" >Product Price Comparator</a></li>
+              <li><a href="comparator.php" class="nav-link scrollto" >Video Downloader</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#">Our Portfolio</a></li>
@@ -64,7 +64,7 @@ include("inc/header.php")
               <h3>What are <strong>Automated Digital Tools?</strong></h3>
               <p>
               Digital tools are online platforms or applications leveraged by businesses or individuals to perform quick and optimized functions that ordinarily could be difficult and time consuming. <br>
-                These include file handling to summary generation, content generation and management tools like AI Writer, Random Password Generator, Privacy Policy Generator e.t.c. 
+                These include file handling to summary generation, content generation and management tools like AI Writer, Random Password Generator, URL Shortener e.t.c. 
               </p>
             </div>
           </div>
@@ -87,9 +87,10 @@ include("inc/header.php")
           <div class="row">
             <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in">
               <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="privacy.php">Privacy Policy Generator</a></h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                <div class="icon"><i class="bx bx-link"></i></div>
+                <h4><a href="shortener.php">URL Shortener</a></h4>
+                <p>is a free tool to shorten URLs and generate short links
+URL shortener allows to create a shortened link making it easy to share</p>
               </div>
             </div>
 
