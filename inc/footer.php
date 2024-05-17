@@ -72,31 +72,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/tools.js"></script>
 
-<script>
 
-  $(document).ready(function(){
-    $('#privacy-policy').hide()
-  });
-  $(document).ready(function () {
-    $('#gen').click(function () {
-      // alert('Hello');
-    var inp = $('#in1').val();
-    // alert(inp);
-    if (inp.is_null) {
-      alert('Type in your company name please!');
-    } else {
-      if (inp === " " || inp === "") {
-        alert('Type in your company name please!');
-      } else {
-        $('#privacy-policy').show()
-      $('#gen').hide()
-      }
-    }
-    })
-  });
-  
-
-</script>
 </body>
 
 </html>
